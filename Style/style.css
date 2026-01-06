@@ -1,0 +1,388 @@
+
+/* Medias queries */
+
+@media(max-width: 1200px){
+    .sectionDeJeu{
+        width: 300px;
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 3rem;
+    }
+}
+@media(max-width: 1000px){
+    .sectionDeJeu{
+        width: 250px;
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 3rem;
+    }
+}
+@media(max-width: 500px){
+    .sectionDeJeu{
+        width: 80px;
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 2rem;
+    }
+    .titre{
+        height: 40px;
+        font-size: 4.5rem;
+        display: flex;
+        align-items: center;
+    }
+    body{
+        height: 20vw;
+    }
+}
+@media(max-width: 600px){
+    .sectionDeJeu{
+        width: 20px;
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 1.5rem;
+    }
+    .LogoStable{
+        height: 12rem;
+    }
+    .titre{
+        height: 20px;
+        font-size: 2.8rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Medias queries ^ */
+
+/* Font */
+
+@font-face {
+    font-family: '#';
+    src: url('#') format('woff2'),
+        url('#') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font ^ */
+
+/* key frames */
+
+@keyframes neonBlink {
+    0% {
+    text-shadow:
+      0 0 20px black,
+      0 0 80px black;
+    }
+    100% {
+    text-shadow:
+      0 0 5px black,
+      0 0 10px black,
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveBackground {
+    from {
+        transform: translateX(0) 
+    }
+	to {
+        transform: translateX(calc(0px - 50% - 50px))
+    }
+}
+
+@keyframes moveBackgroundImage{
+    from {
+        background-position: 0vw 0vw;
+    }
+    to {
+        background-position: 0% 100%;
+    }
+}
+
+/* key frames ^ */
+
+/* Page */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    color: #820e0e;
+    box-sizing: border-box;
+}
+
+/* Page ^ */
+
+/* Rotation */
+
+.ImageRotation{
+    animation: spin 20s linear infinite;
+}
+.ContenuDeRotation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rotation ^ */
+
+/* style */
+
+body{
+    background-image: url(../Images/LittleNightmareBackground.jpg);
+    background-position: center;
+    min-height: 100vh;
+    animation: linear moveBackgroundImage;
+    animation-duration: auto;
+    animation-timeline: scroll();
+}
+.Banniere-image{
+    width: 0 auto;
+    background-image: url(../Images/Banner.jpg);
+    background-position: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    height: 25vh;
+}
+article{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+    width: auto;
+    padding-bottom: 1.5rem;
+    max-width: 100vw;
+}
+#contenuJeu{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    gap: 0.5rem;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 10vh;
+    background-color: darkslategray;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: #111c1c;
+    border-top: 2px solid #162424;
+}
+
+    /* section de jeu */
+
+    .sectionDeJeu{
+        box-shadow: 0.2rem 0.2rem 0.6rem grey;
+        height: 75vh;
+        padding: 4rem;
+        align-items: end;
+        color: white;
+        flex-wrap: wrap;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 6vh;
+        border-radius: 2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: cover;
+    }
+    .sectionDeJeu:hover{
+        transform: scale(1.05);
+        transition: 0.5s;
+        cursor: grab;
+        box-shadow: none;
+    }
+    .sectionDeJeu:not(:hover){
+        transition: 0.5s;
+    }
+    #Capsule1{
+        background-image: url(../Images/CapsulePrincipal1.png);
+    }
+    #Capsule2{
+        background-image: url(../Images/CapsulePrincipal2.jpg);
+    }
+    #Capsule3{
+        background-image: url(../Images/CapsulePrincipal3.jpg);
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        display: flex;
+        justify-content: center;
+        background-repeat: repeat;
+    }
+    
+
+    /* section de jeu ^ */
+
+    /* Contenu pages */ 
+
+        /* Images */
+
+        .logo{
+            height: 80px;
+            border: 0px;
+        }
+        .logo:hover{
+            transition: 0.3s ease;
+            transform: scale(1.07);
+        }
+        img{
+            height: 30vh;
+            border-radius: 20px;
+            border: 3px solid white;
+        }
+        .Eye, .image-personnages, .LogoStable, .ImageRotation{
+            border: 0px solid;
+        }
+        .image-container, .image-container-game{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .image-container-game{
+            border-radius: 50px;
+        }
+        .cover-fit {
+            object-fit: cover;
+            width: 30vh;
+            height: 30vh;
+        }
+        .trailer{
+            border-radius: 20px;
+            height: 55vh;
+            box-shadow: 0.2rem 0.2rem 0.6rem black;
+        }
+        .ContenuReanimal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            width: auto;
+            height: auto;
+            margin: 2rem;
+            text-decoration: underline;
+            flex-direction: column;
+        }
+        .imageRenimal{
+            display: flex;
+            width: 88vw;
+            height: auto;
+            border: none;
+            box-shadow: 0.2rem 0.2rem 0.6rem grey;
+        }
+        .imageRenimal:hover{
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+        .imageRenimal:not(:hover){
+            transition: 0.5s;
+        }
+
+        /* Images ^ */
+
+        /* Textes */
+    
+        h1{
+            display: flex;
+            color: white;
+            font-size: 10vh;
+            text-shadow: 
+                0 0 5px white, 
+                0 0 10px white,  
+                0 0 20px white,
+                0 0 40px black, 
+                0 0 80px black;
+                animation: neonBlink 0.8s ease-in-out infinite alternate;
+        }
+        .personnages{
+            background-color: hsla(200, 80%, 85%, .3);
+            border-radius: 50px;
+        }
+        p{
+            background: linear-gradient(to bottom, red, rgb(123, 0, 0), black);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    /* Textes ^ */
+
+
+
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color: #820e0e;
+    background-color: hsla(200, 80%, 85%, .3);
+}
+.linkContaint{
+    border-radius: 2rem;
+    background: #6e6e6e;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+.link{
+    border-radius: 50px;
+    background: #616161;
+    padding: 10px 20px;
+    color: white;
+}
+.link:hover{
+    background-color: #454545;
+    color: gray;
+    transition: all 0.3s ease;
+}
+.game-link{
+    border-radius: 10px;
+    background:#454545;
+    padding: 10px 20px;
+    color: #6e6e6e;
+    text-decoration: none;
+}
+.game-link:hover{
+    transition: all 0.3s ease;
+    background: black;
+    color: white;
+}
+.link-arriere{
+    border-radius: 50px;
+    background:  #253d3d;
+    padding: 10px 20px;
+    color: #090f0f;
+}
+.link-arriere, .link{
+    text-decoration: none;
+}
+.link-arriere:hover{
+    background-color: #1a2b2b;
+    color: darkslategray;
+    transition: all 0.3s ease;
+}
+.link-arriere:not(:hover), .game-link:not(:hover), .link:not(:hover){
+    transition: all 0.1s ease;
+}
